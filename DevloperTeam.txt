@@ -1,0 +1,9 @@
+Sip Provider:
+	1-GUI
+	2-Framwork
+
+All Pakages & calsses was devloped by:
+Ashraf Kmal (ashrafnet4u@hotmail.com)(972-599594047)
+Akram Kmal  ( akramnet4u@hotmail.com).
+
+Thanks for PjSIP.org.

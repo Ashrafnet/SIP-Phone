@@ -1,0 +1,784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26185154-C0D4-4823-8AE4-83731AE28376}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Softphone</RootNamespace>
+    <AssemblyName>Nogafone</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>app11.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SIPProvider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SIPProvider\bin\Debug\SIPProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainFolder\ctrAbout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\ctrAbout.Designer.cs">
+      <DependentUpon>ctrAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\ctrCalender.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\ctrCalender.Designer.cs">
+      <DependentUpon>ctrCalender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\ctrMainWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\ctrMainWindow.Designer.cs">
+      <DependentUpon>ctrMainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\ctrMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\ctrMenu.Designer.cs">
+      <DependentUpon>ctrMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\ctrMenuItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\ctrMenuItem.Designer.cs">
+      <DependentUpon>ctrMenuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\ctrRecordpic.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainFolder\ctrTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainFolder\ctrTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\ctrTitle.Designer.cs">
+      <DependentUpon>ctrTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\DropDownItems.cs" />
+    <Compile Include="MainFolder\ctrTransferCall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\ctrTransferCall.Designer.cs">
+      <DependentUpon>ctrTransferCall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\SmsFolder\ctrSmsMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\SmsFolder\ctrSmsMenu.Designer.cs">
+      <DependentUpon>ctrSmsMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\ctrButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="MainFolder\CallHistory\ctrCallHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\CallHistory\ctrCallHistory.Designer.cs">
+      <DependentUpon>ctrCallHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\RemarkNotes\ctrRemarkNotes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\RemarkNotes\ctrRemarkNotes.Designer.cs">
+      <DependentUpon>ctrRemarkNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\RemarkNotes\ctrRemarkNoteEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\RemarkNotes\ctrRemarkNoteEditor.Designer.cs">
+      <DependentUpon>ctrRemarkNoteEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\SmsFolder\clsSMS.cs" />
+    <Compile Include="MainFolder\SmsFolder\ctrSmsInbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\SmsFolder\ctrSmsInbox.Designer.cs">
+      <DependentUpon>ctrSmsInbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\ctrVolume.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\ctrVolume.Designer.cs">
+      <DependentUpon>ctrVolume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\CallHistory\ctrRecordProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\CallHistory\ctrRecordProperties.Designer.cs">
+      <DependentUpon>ctrRecordProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigFolder\AccountConfig.cs" />
+    <Compile Include="MainFolder\ctrDialer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\ctrDialer.Designer.cs">
+      <DependentUpon>ctrDialer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\ctrLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\ctrLogin.Designer.cs">
+      <DependentUpon>ctrLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\ctrSelectCodecs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\ctrSelectCodecs.Designer.cs">
+      <DependentUpon>ctrSelectCodecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\ctrKeyPad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\ctrKeyPad.Designer.cs">
+      <DependentUpon>ctrKeyPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\EnumToString.cs" />
+    <Compile Include="Classes\FactoryManger.cs" />
+    <Compile Include="ListViewFolder\SpecialListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\Delegates.cs" />
+    <Compile Include="MainFolder\SmsFolder\ctrMsgProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\SmsFolder\ctrMsgProperties.Designer.cs">
+      <DependentUpon>ctrMsgProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\SmsFolder\ctrSmsSender.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\SmsFolder\ctrSmsSender.Designer.cs">
+      <DependentUpon>ctrSmsSender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFolder\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\ctrSelectColumns.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\ctrSelectColumns.designer.cs">
+      <DependentUpon>ctrSelectColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewFolder\ListViewComparer.cs" />
+    <Compile Include="Classes\CMediaPlayerProxy.cs" />
+    <Compile Include="MainFolder\PhoneBookFace\ctrPhoneBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\PhoneBookFace\ctrPhoneBook.Designer.cs">
+      <DependentUpon>ctrPhoneBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\PhoneBookFace\ctrPhoneUserEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFolder\PhoneBookFace\ctrPhoneUserEditor.Designer.cs">
+      <DependentUpon>ctrPhoneUserEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigFolder\PhoneConfig.cs" />
+    <Compile Include="Classes\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainFolder\ctrButton.resx">
+      <DependentUpon>ctrButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\ctrAbout.resx">
+      <DependentUpon>ctrAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\ctrCalender.resx">
+      <DependentUpon>ctrCalender.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\CallHistory\ctrCallHistory.resx">
+      <DependentUpon>ctrCallHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\ctrMainWindow.resx">
+      <DependentUpon>ctrMainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\ctrMenu.resx">
+      <DependentUpon>ctrMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\ctrMenuItem.resx">
+      <DependentUpon>ctrMenuItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\ctrRecordpic.resx">
+      <DependentUpon>ctrRecordpic.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\ctrTitle.resx">
+      <DependentUpon>ctrTitle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\ctrTransferCall.resx">
+      <DependentUpon>ctrTransferCall.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\RemarkNotes\ctrRemarkNotes.resx">
+      <DependentUpon>ctrRemarkNotes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\RemarkNotes\ctrRemarkNoteEditor.resx">
+      <DependentUpon>ctrRemarkNoteEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\SmsFolder\ctrSmsInbox.resx">
+      <DependentUpon>ctrSmsInbox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\ctrVolume.resx">
+      <DependentUpon>ctrVolume.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\CallHistory\ctrRecordProperties.resx">
+      <DependentUpon>ctrRecordProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\ctrDialer.resx">
+      <DependentUpon>ctrDialer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\ctrLogin.resx">
+      <DependentUpon>ctrLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\ctrSelectCodecs.resx">
+      <DependentUpon>ctrSelectCodecs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\ctrKeyPad.resx">
+      <DependentUpon>ctrKeyPad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\SmsFolder\ctrMsgProperties.resx">
+      <DependentUpon>ctrMsgProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\SmsFolder\ctrSmsMenu.resx">
+      <DependentUpon>ctrSmsMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\SmsFolder\ctrSmsSender.resx">
+      <DependentUpon>ctrSmsSender.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\ctrSelectColumns.resx">
+      <DependentUpon>ctrSelectColumns.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\PhoneBookFace\ctrPhoneBook.resx">
+      <DependentUpon>ctrPhoneBook.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFolder\PhoneBookFace\ctrPhoneUserEditor.resx">
+      <DependentUpon>ctrPhoneUserEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingFolder\ctrSettingsAdvanced.resx">
+      <DependentUpon>ctrSettingsAdvanced.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingFolder\ctrSettingsDevices.resx">
+      <DependentUpon>ctrSettingsDevices.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingFolder\ctrSettingsGenral.resx">
+      <DependentUpon>ctrSettingsGenral.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingFolder\ctrSettingsNetwork.resx">
+      <DependentUpon>ctrSettingsNetwork.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingFolder\ctrWebProxy.resx">
+      <DependentUpon>ctrWebProxy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingFolder\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="SettingFolder\ctrSettingsAdvanced.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingFolder\ctrSettingsAdvanced.Designer.cs">
+      <DependentUpon>ctrSettingsAdvanced.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingFolder\ctrSettingsDevices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingFolder\ctrSettingsDevices.Designer.cs">
+      <DependentUpon>ctrSettingsDevices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingFolder\ctrSettingsGenral.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingFolder\ctrSettingsGenral.Designer.cs">
+      <DependentUpon>ctrSettingsGenral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingFolder\ctrSettingsNetwork.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingFolder\ctrSettingsNetwork.Designer.cs">
+      <DependentUpon>ctrSettingsNetwork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingFolder\ctrWebProxy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingFolder\ctrWebProxy.Designer.cs">
+      <DependentUpon>ctrWebProxy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingFolder\DefultSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SettingFolder\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingFolder\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingFolder\ISettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SettingFolder\ISettingsControl.cs" />
+    <Compile Include="SettingFolder\Settings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainFolder\SmsFolder\SmsMsg.cs" />
+    <Compile Include="MainFolder\SmsFolder\SmsMsgs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kill.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\PropertiesHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\DeleteHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\DialHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\delete_16x.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\RefreshDocViewHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\book_active_directory.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\AddPhoneBook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\contact16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\calling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Called.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\reseved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\missed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\NewContact1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Speaker1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\mic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\release.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\hold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\genralsettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\ClosePreviewHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\wait.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\main.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\bg.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Close1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Close2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Close3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Hide1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Hide2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Hide3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Accept %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Accept %282%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Accept %283%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\phoneBook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\01.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\02.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\03.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\11.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\12.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\13.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\21.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\22.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\23.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\31.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\32.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\33.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\41.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\42.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\43.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\51.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\52.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\53.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\61.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\62.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\63.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\71.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\72.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\73.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\81.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\82.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\83.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\91.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\92.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\93.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\solm1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\solm2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\solm3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\star1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\star2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\Keypad\star3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\logoff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\res\hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app11.ico" />
+    <None Include="bin\Debug\res\ap.png" />
+    <None Include="bin\Debug\res\Keypad\x.gif" />
+    <None Include="bin\Debug\res\Keypad\min.gif" />
+    <None Include="bin\Debug\res\Keypad\lock.gif" />
+    <None Include="bin\Debug\res\menu\remarks.png" />
+    <None Include="bin\Debug\res\SpeakerMute.png" />
+    <None Include="bin\Debug\res\micMute.png" />
+    <None Include="bin\Debug\res\menu\sendsms.png" />
+    <None Include="bin\Debug\res\menu\outbox.png" />
+    <None Include="bin\Debug\res\menu\Inbox.png" />
+    <None Include="bin\Debug\res\Keypad\SubKeypad\ok3.gif" />
+    <None Include="bin\Debug\res\Keypad\SubKeypad\ok2.gif" />
+    <None Include="bin\Debug\res\Keypad\SubKeypad\ok1.gif" />
+    <None Include="bin\Debug\res\Keypad\SubKeypad\cancel3.gif" />
+    <None Include="bin\Debug\res\Keypad\SubKeypad\cancel2.gif" />
+    <None Include="bin\Debug\res\Keypad\SubKeypad\cancel1.gif" />
+    <None Include="bin\Debug\res\mail.png" />
+    <None Include="bin\Debug\res\note.gif" />
+    <None Include="bin\Debug\res\calender.gif" />
+    <None Include="bin\Debug\res\readed.png" />
+    <None Include="bin\Debug\res\B.gif" />
+    <None Include="bin\Debug\res\Redial.gif" />
+    <None Include="bin\Debug\res\c.gif" />
+    <None Include="bin\Debug\res\redial.bmp" />
+    <None Include="bin\Debug\res\C.bmp" />
+    <None Include="bin\Debug\res\B.bmp" />
+    <None Include="bin\Debug\res\close.png" />
+    <None Include="bin\Debug\res\menu\mnu_recharge.png" />
+    <None Include="bin\Debug\res\menu\mnu_outgoing.png" />
+    <None Include="bin\Debug\res\menu\mnu_missed.png" />
+    <None Include="bin\Debug\res\menu\mnu_incoming.png" />
+    <None Include="bin\Debug\res\menu\mnu_about.png" />
+    <None Include="bin\Debug\res\menu\mnu_activecalls.png" />
+    <None Include="bin\Debug\res\menu\mnu_calender.png" />
+    <None Include="bin\Debug\res\menu\mnu_sms.png" />
+    <None Include="bin\Debug\res\menu\mnu_phonebook.png" />
+    <None Include="bin\Debug\res\record.png" />
+    <None Include="bin\Debug\res\Keypad\back3.gif" />
+    <None Include="bin\Debug\res\Keypad\back2.gif" />
+    <None Include="bin\Debug\res\Keypad\back1.gif" />
+    <None Include="bin\Debug\res\menu\internal_interface_55.gif" />
+    <None Include="bin\Debug\res\menu\internal_interface_54.gif" />
+    <None Include="bin\Debug\res\menu\internal_interface_32.gif" />
+    <None Include="bin\Debug\res\menu\internal_interface_31.gif" />
+    <None Include="bin\Debug\res\menu\internal_interface_30.gif" />
+    <None Include="bin\Debug\res\menu\internal_interface_25.gif" />
+    <None Include="bin\Debug\res\menu\internal_interface_20.gif" />
+    <None Include="bin\Debug\res\menu\internal_interface_18.gif" />
+    <None Include="bin\Debug\res\Keypad\transfer3.gif" />
+    <None Include="bin\Debug\res\Keypad\transfer2.gif" />
+    <None Include="bin\Debug\res\Keypad\transfer1.gif" />
+    <None Include="bin\Debug\res\Keypad\record3.gif" />
+    <None Include="bin\Debug\res\Keypad\record2.gif" />
+    <None Include="bin\Debug\res\Keypad\record1.gif" />
+    <None Include="bin\Debug\res\Keypad\hold3.gif" />
+    <None Include="bin\Debug\res\Keypad\hold2.gif" />
+    <None Include="bin\Debug\res\Keypad\hold1.gif" />
+    <None Include="bin\Debug\res\Keypad\conference3.gif" />
+    <None Include="bin\Debug\res\Keypad\conference2.gif" />
+    <None Include="bin\Debug\res\Keypad\conference1.gif" />
+    <None Include="bin\Debug\res\Keypad\menu3.gif" />
+    <None Include="bin\Debug\res\Keypad\menu2.gif" />
+    <None Include="bin\Debug\res\Keypad\menu1.gif" />
+    <None Include="bin\Debug\res\search.png" />
+    <None Include="bin\Debug\res\Keypad\release3.gif" />
+    <None Include="bin\Debug\res\Keypad\release2.gif" />
+    <None Include="bin\Debug\res\Keypad\release1.gif" />
+    <None Include="bin\Debug\res\Keypad\accept3.gif" />
+    <None Include="bin\Debug\res\Keypad\accept2.gif" />
+    <None Include="bin\Debug\res\Keypad\accept1.gif" />
+    <None Include="bin\Debug\res\EnvelopeHS.png" />
+    <None Include="bin\Debug\res\Stop.bmp" />
+    <None Include="bin\Debug\res\sms.png" />
+    <None Include="bin\Debug\res\forword.png" />
+    <None Include="Resources\Loading.gif" />
+    <None Include="bin\Debug\res\app.png" />
+    <None Include="bin\Debug\res\CopyHS.png" />
+    <None Include="bin\Debug\res\PasteHS.png" />
+    <None Include="bin\Debug\res\login.png" />
+    <None Include="bin\Debug\res\181.png" />
+    <None Include="bin\Debug\res\incomingcall.png" />
+    <None Include="Resources\dtmf_3.wav" />
+    <None Include="Resources\dtmf_2.wav" />
+    <None Include="Resources\dtmf_1.wav" />
+    <None Include="Resources\dtmf_0.wav" />
+    <None Include="Resources\dtmf_star.wav" />
+    <None Include="Resources\dtmf_hash.wav" />
+    <None Include="Resources\dtmf_9.wav" />
+    <None Include="Resources\dtmf_8.wav" />
+    <None Include="Resources\dtmf_7.wav" />
+    <None Include="Resources\dtmf_6.wav" />
+    <None Include="Resources\dtmf_5.wav" />
+    <None Include="Resources\dtmf_4.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C9E5828B-43F9-4C90-AC8C-38635D303ACA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIPProvider</RootNamespace>
+    <AssemblyName>SIPProvider</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AudioMixer\CallbackWindow.cs" />
+    <Compile Include="AudioMixer\Mixer.cs" />
+    <Compile Include="AudioMixer\MixerControl.cs" />
+    <Compile Include="AudioMixer\MixerControls.cs" />
+    <Compile Include="AudioMixer\MixerDetail.cs" />
+    <Compile Include="AudioMixer\MixerDetails.cs" />
+    <Compile Include="AudioMixer\MixerException.cs" />
+    <Compile Include="AudioMixer\MixerLine.cs" />
+    <Compile Include="AudioMixer\MixerLines.cs" />
+    <Compile Include="AudioMixer\MixerNative.cs" />
+    <Compile Include="AudioMixer\Mixers.cs" />
+    <Compile Include="CallRecords\CallLoger.cs" />
+    <Compile Include="CallRecords\CallRecordComparer.cs" />
+    <Compile Include="Common\CCallManager.cs" />
+    <Compile Include="Common\CStateMachine.cs" />
+    <Compile Include="Common\PhoneState\CActiveState.cs" />
+    <Compile Include="Common\PhoneState\CAlertingState.cs" />
+    <Compile Include="Common\PhoneState\CConnectingState.cs" />
+    <Compile Include="Common\PhoneState\CHoldingState.cs" />
+    <Compile Include="Common\PhoneState\CIdleState.cs" />
+    <Compile Include="Common\PhoneState\CIncomingState.cs" />
+    <Compile Include="Common\PhoneState\CReleasedState.cs" />
+    <Compile Include="Common\PhoneState\CTerminatedState.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RemarkNotes\RemarkNotes.cs" />
+    <Compile Include="RemarkNotes\RemarkNote.cs" />
+    <Compile Include="DataChangeEventArgs.cs" />
+    <Compile Include="NullValues\NullCallProxy.cs" />
+    <Compile Include="NullValues\NullConfigurator.cs" />
+    <Compile Include="NullValues\NullFactory.cs" />
+    <Compile Include="NullValues\NullMediaProxy.cs" />
+    <Compile Include="NullValues\NullState.cs" />
+    <Compile Include="NullValues\NullStateMachine.cs" />
+    <Compile Include="NullValues\NullTimer.cs" />
+    <Compile Include="PhoneBookSaver\PhoneBook.cs" />
+    <Compile Include="PhoneBookSaver\PhoneUser.cs" />
+    <Compile Include="PhoneBookSaver\PhoneuserComparer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CallRecords\CCallRecord.cs" />
+    <Compile Include="RizeDataChangeEvents.cs" />
+    <Compile Include="SIPCore\Delegates.cs" />
+    <Compile Include="SIPCore\Enums.cs" />
+    <Compile Include="SIPCore\Interfaces\AbstractFactory.cs" />
+    <Compile Include="SIPCore\Interfaces\IAbstractState.cs" />
+    <Compile Include="SIPCore\Interfaces\ICallLogInterface.cs" />
+    <Compile Include="SIPCore\Interfaces\ICallProxyInterface.cs" />
+    <Compile Include="SIPCore\Interfaces\IMediaProxyInterface.cs" />
+    <Compile Include="SIPCore\Interfaces\IStateMachine.cs" />
+    <Compile Include="SIPCore\Interfaces\ITimer.cs" />
+    <Compile Include="SIPCore\Interfaces\IVoipProxy.cs" />
+    <Compile Include="NullValues\NullVoipProxy.cs" />
+    <Compile Include="SIPCore\pjsipCallProxy.cs" />
+    <Compile Include="SIPCore\pjsipPresenceAndMessaging.cs" />
+    <Compile Include="SIPCore\pjsipRegistrar.cs" />
+    <Compile Include="SIPCore\pjsipStackProxy.cs" />
+    <Compile Include="SIPCore\SipConfigStruct.cs" />
+    <Compile Include="SIPCore\PjsipMethods.cs" />
+    <Compile Include="SIPCore\Interfaces\IAccount.cs" />
+    <Compile Include="SIPCore\Interfaces\IConfiguratorInterface.cs" />
+    <Compile Include="VolumeControl\Volume.cs" />
+    <Compile Include="WaveServices\WaveNative.cs" />
+    <Compile Include="XmlProvider\Encrypt.cs" />
+    <Compile Include="XmlProvider\XmlFile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
